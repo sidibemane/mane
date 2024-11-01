@@ -1,0 +1,76 @@
+/* Styles généraux pour la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Couleur de fond de la page */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur de la liste des campagnes archivées */
+.dashboard-container {
+    max-width: 600px; /* Largeur maximale du conteneur */
+    margin: 50px auto; /* Centrer le conteneur horizontalement */
+    padding: 20px;
+    border: 1px solid #cf332d; /* Bordure rouge autour du conteneur */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: #fff; /* Couleur de fond du conteneur */
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1); /* Ombre légère pour l'effet de profondeur */
+}
+
+/* Styles pour le titre de la liste */
+.dashboard-container h1 {
+    color: #cf332d; /* Couleur du titre */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px; /* Ajustez selon vos préférences */
+    font-weight: 700; /* Gras pour le titre */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Ombre du texte pour un effet plus sombre */
+}
+
+/* Styles pour la liste des campagnes archivées */
+.dashboard-container ul {
+    list-style-type: none; /* Supprimer les puces de la liste */
+    padding: 0;
+}
+
+.dashboard-container li {
+    border-bottom: 1px solid #ddd; /* Bordure entre les éléments */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Aligner les éléments au bout de la ligne */
+    align-items: center;
+}
+
+.dashboard-container li:last-child {
+    border-bottom: none; /* Supprimer la bordure du dernier élément */
+}
+
+/* Styles pour les boutons de restauration */
+.dashboard-container button {
+    background-color: #cf332d; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1);
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Transition pour le survol */
+}
+
+/* Styles pour le survol du bouton */
+.dashboard-container button:hover {
+    background-color: #a82e27; /* Couleur de fond du bouton au survol */
+}
+
+/* Styles pour le lien de retour au tableau de bord */
+.dashboard-container a {
+    display: block;
+    text-align: center;
+    color: #cf332d; /* Couleur du lien */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 16px;
+}

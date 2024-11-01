@@ -1,0 +1,220 @@
+/* Styles généraux pour la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Couleur de fond de la page */
+    color: #333; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    margin-top: 70px; /* Espace sous l'en-tête */
+    padding: 20px;
+}
+
+/* Styles pour l'en-tête */
+.site-header {
+    background-color: #cf332d; /* Couleur d'arrière-plan du header */
+    color: #fff; /* Couleur du texte */
+    padding: 6px 40px; /* Espacement intérieur du header */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le logo horizontalement */
+    position: fixed;
+    width: 95%;
+    top: 0;
+    left: 0;
+    z-index: 9950; /* Assurez-vous que l'en-tête soit au-dessus du reste du contenu */
+}
+
+/* Styles pour le contenu de l'en-tête */
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* Limite la largeur maximale du contenu */
+    width: 100%;
+    justify-content: space-between; /* Aligne le logo à gauche et les autres éléments à droite */
+}
+
+/* Styles pour le logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff; /* Couleur du texte pour les liens dans le header */
+}
+
+/* Styles pour l'image du logo */
+.logo-image {
+    width: 105px; /* Agrandir la taille du logo */
+    height: 68px; /* Ajustez la hauteur si nécessaire pour maintenir les proportions */
+    border-radius: 50%; /* Bord arrondi pour faire du logo un cercle */
+    object-fit: cover; /* Maintient les proportions de l'image tout en remplissant le conteneur */
+}
+
+/* Styles pour le conteneur de l'icône de profil et du lien de déconnexion */
+.header-right {
+    display: flex;
+    align-items: center; /* Aligne verticalement les éléments */
+    margin-left: auto; /* Pousse le conteneur vers la droite */
+}
+
+/* Styles pour la section de profil */
+.profile-section {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    align-items: center; /* Centre horizontalement les éléments */
+    margin-left: 20px; /* Décalage vers la gauche pour l'icône de profil */
+}
+
+/* Styles pour l'icône de profil */
+.profile-icon {
+    font-size: 32px; /* Taille de l'icône de profil */
+    color: #fff; /* Couleur de l'icône de profil */
+}
+
+/* Styles pour le lien de déconnexion */
+.logout-link {
+    color: #fff; /* Couleur du lien de déconnexion */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 16px; /* Taille de la police pour le lien de déconnexion */
+    margin-top: 5px; /* Espacement au-dessus du lien de déconnexion */
+}
+
+.logout-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Styles pour la barre de recherche */
+.search-input-container {
+    position: relative;
+    display: inline-block;
+    width: 800px; /* Ajustez la largeur si nécessaire */
+    margin-top: 10px; /* Réduisez l'espace entre l'en-tête et la barre de recherche */
+}
+
+.search-input-container input {
+    width: 100%;
+    padding-left: 30px; /* Ajustez cette valeur si nécessaire */
+    padding: 13px; /* Ajoute du padding */
+    border: 1.5px solid black; /* Bordure noire */
+    border-radius: 20px; /* Coins arrondis pour le champ de recherche */
+    box-sizing: border-box; /* Assurez-vous que le padding n'affecte pas la largeur */
+}
+
+.search-input-container .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 5px; /* Ajustez cette valeur si nécessaire */
+    transform: translateY(-50%);
+    color: #333; /* Définir la couleur de l'icône */
+    font-size: 11px; /* Ajustez la taille si nécessaire */
+}
+
+/* Styles pour les boutons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 3px; /* Réduisez l'espace entre les boutons */
+}
+
+.btn-primary {
+    background-color: #cf332d; /* Couleur de fond pour le bouton principal */
+}
+
+.btn-primary:hover {
+    background-color: #333; /* Couleur au survol pour le bouton principal */
+}
+
+.btn-secondary {
+    background-color: black; /* Couleur de fond pour le bouton secondaire */
+}
+
+.btn-secondary:hover {
+    background-color: #333; /* Couleur au survol pour le bouton secondaire */
+}
+
+/* Styles pour la liste des campagnes */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Enlevez la marge si nécessaire */
+}
+
+.campaign-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligne les colonnes */
+    padding: 10px;
+    border-bottom: 3px solid #eee; /* Bordure légère sous chaque élément */
+    margin-bottom: 5px; /* Réduisez l'espace entre les éléments de la liste */
+}
+
+.campaign-item .name {
+    flex: 2; /* Colonne pour le nom de la campagne */
+    margin-right: 10px; /* Espace entre le nom et les dates */
+}
+
+.campaign-item .dates {
+    flex: 2; /* Colonne pour les dates */
+    margin-right: 10px; /* Espace entre les dates et les actions */
+}
+
+.campaign-item .actions {
+    flex: 1; /* Colonne pour les boutons */
+    display: flex;
+    justify-content: space-between; /* Aligne les boutons côte à côte */
+    gap: 5px; /* Espace entre les boutons */
+}
+
+button {
+    background-color: #cf332d; /* Couleur de fond pour les boutons dans la liste des campagnes */
+    border: none;
+    color: #fff;
+    width: 95px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1); /* Coins arrondis pour les boutons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a4747; /* Couleur au survol pour les boutons dans la liste des campagnes */
+}
+
+/* Styles pour l'alignement des liens et boutons d'action */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Espacement au-dessus des boutons */
+}
+
+.action-buttons .btn-secondary {
+    margin-right: 20px; /* Espace entre le bouton secondaire et le lien Logout */
+}
+
+.action-buttons a {
+    color: #cf332d; /* Couleur du lien Logout */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.action-buttons a:hover {
+    color: black; /* Couleur au survol du lien Logout */
+}
+
+/* Espacement entre la barre de recherche et la liste des campagnes */
+.dashboard-container > .search-input-container {
+    margin-bottom: 1px; /* Ajustez cette valeur pour augmenter ou diminuer l'espace */
+}
+

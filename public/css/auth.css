@@ -1,0 +1,128 @@
+/* login.css */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.logo-container {
+    margin-bottom: 20px; /* Espacement du logo par rapport au titre */
+}
+
+.logo {
+    width: 120px;
+    height: 110px;
+}
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray; /* Set the eye icon color to gray */
+    opacity: 0.6; /* Make the eye icon slightly transparent */
+}
+.eye-icon:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+.error {
+    color: red;
+    margin-top: 5px;
+}
+h2 {
+    color: #cf332d; /* Rouge */
+}
+
+form {
+    width: 308px;
+    height: 540px;
+    position: absolute; /* Position absolue pour pouvoir centrer */
+    top: 50%; /* Déplacement de 50% vers le bas */
+    left: 50%; /* Déplacement de 50% vers la droite */
+    transform: translate(-50%, -50%); /* Centrage précis */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px rgba(1, 1, 1, 1);
+    border-radius: 9px;
+}
+
+
+.form-group {
+    width: 95%;
+    margin-bottom: 8px;
+    position: relative;
+}
+.span {
+    color: #cf332d; /* Rouge */
+    font-weight: bold; /* Gras */
+    margin-left: 5px; /* Espacement à gauche de l'astérisque */
+}
+label {
+    color: #000000; /* Noir */
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 210px; /* Largeur ajustée pour le padding */
+    padding: 16px;
+    padding-right: 30px;
+    border: 1px solid #000000; /* Bordure noire */
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 1);
+    outline: none;
+}
+/* Styles spécifiques pour le sélecteur "Role" */
+select {
+    width: 80px;
+    height: 40px; /* Hauteur ajustée pour correspondre aux inputs */
+    appearance: none; /* Supprimer le style par défaut du navigateur */
+    background-color: #ffffff; /* Fond blanc */
+    padding: 10px;
+    color: #000000; /* Couleur du texte noir */
+    border: 1px solid #000000; /* Bordure noire */
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 1);
+    margin-top: 5px; /* Espacement supérieur */
+}
+
+select:focus {
+    border-color: #cf332d; /* Bordure rouge au focus */
+    outline: none; /* Supprimer le contour au focus */
+}
+
+option {
+    background-color: #ffffff; /* Fond blanc pour les options */
+    color: #000000; /* Couleur du texte noir */
+}
+button[type="submit"] {
+    width: 67%;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    background-color: #cf332d; /* Rouge */
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 1);
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #cf332d; /* Rouge foncé au survol */
+}
+a {
+    text-decoration: none;
+    color: #cf332d;
+}
+.error {
+    color: #cf332d;
+    font-size: 0.875em;
+    margin-top: 5px;
+}

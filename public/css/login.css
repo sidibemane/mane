@@ -1,0 +1,125 @@
+/* Importer une police depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Styles pour l'arrière-plan du body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image d'arrière-plan floutée */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #edf0f4 !important; /* Utilisation d'un fond blanc neutre */
+    background-image: none !important;
+    background-position: center;
+    filter: blur(6px); /* Applique un flou */
+    z-index: -1; /* Place l'image derrière le contenu */
+}
+
+
+/* Styles du conteneur de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background-color:white; /* Fond blanc semi-transparent pour le formulaire */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(25, 23, 23, 5); /* Légère ombre portée */
+    z-index: 1; /* Assurez-vous que le formulaire soit au-dessus du flou */
+    width: 380px; /* Largeur augmentée du formulaire */
+    height: 490px; /* Hauteur augmentée du formulaire */
+}
+
+.logo-container {
+    margin-bottom: 20px;
+
+}
+
+.logo {
+    width: 155px;
+    height: 84px;
+    margin-top: -60px; /* Fait monter le logo vers le haut */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+.login-container span {
+    font-family: 'Bungee', cursive; /* Police de thème amusante */
+    font-size: 48px; /* Taille de police pour le texte TOMBOLA */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 50px; /* Ajoute un grand espace sous le texte */
+    margin-top: -90px; /* Remonte beaucoup le texte vers le haut */
+}
+
+
+/* Espacement entre "TOMBOLA" et les champs de saisie */
+.form-group {
+    margin-bottom: 20px; /* Ajoute de l'espace entre les champs */
+}
+input[type="text"],
+input[type="password"] {
+    width: 350px;;
+
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 384px;
+    padding: 12px;
+    border: none;
+    background-color: #cf332d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #b52b24;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+    opacity: 0.6;
+}
+
+.error {
+    color: red;
+    font-size: 0.875em;
+}
+
+a {
+    color: #cf332d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,22 @@
+<?php
+$servername = "127.0.0.1";
+$username = "nema";
+$password = "awa123";
+$dbname = "laravel";
+
+// Créer une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifiez la connexion
+if ($conn->connect_error) {
+    die("Erreur de connexion : " . $conn->connect_error);
+}
+echo "Connexion réussie à la base de données!";
+$conn->close();
+?<?php
+try {
+    $pdo = new PDO("mysql:host=127.0.0.1;dbname=laravel", "nema", "awa123");
+    echo "Connexion réussie à la base de données.";
+} catch (PDOException $e) {
+    echo "Erreur de connexion : " . $e->getMessage();
+}

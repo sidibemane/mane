@@ -1,0 +1,1850 @@
+#sidenav-main {
+    background-color: #000; /* Noir pour le fond */
+    color: #fff; /* Blanc pour le texte */
+}
+
+/* Style pour l'en-tête de la barre latérale */
+.sidenav-header {
+    background-color: #cf332d; /* Rouge pour l'en-tête */
+    padding: 1rem;
+}
+
+/* Style pour l'image du logo */
+.log-image {
+    width: 110px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-item-sidebar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0); /* Ligne de séparation légère */
+    margin-bottom: 0; /* Élimine presque tout l'espace entre les éléments */
+}
+
+
+/* Style pour les liens de navigation */
+.nav-link {
+    color: #fff; /* Blanc pour les liens */
+    padding: 0.5rem 1rem;
+    text-decoration: none; /* Supprime la sous-ligne des liens */
+    display: flex;
+    align-items: center;
+    font-size: 9rem; /* Augmente légèrement la taille de la police */
+}
+/* Style pour les boutons de la barre latérale */
+
+.nav-link.active {
+    background-color: #cf332d !important;
+    color: white !important;
+}
+
+/* Style pour les boutons non actifs */
+.navbar-nav .nav-item .nav-link {
+    color: #fff !important; /* Blanc pour le texte des boutons non actifs */
+}
+
+/* Style pour le survol des boutons */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #cf332d !important; /* Rouge foncé pour le survol */
+}
+/* Style pour la ligne transparente ajoutée avant "Account pages" */
+.transparent-line {
+    border: none; /* Supprime les bordures par défaut */
+    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Ligne transparente avec une couleur légère */
+    margin: 1rem 0; /* Espace au-dessus et en-dessous de la ligne */
+}
+/* Style pour les éléments du pied de page */
+.sidenav-footer .nav-item {
+    margin-bottom: 0.5rem; /* Espace entre les éléments du pied de page */
+}
+
+/* Style pour les boutons de pied de page */
+.sidenav-footer .btn {
+    background-color: #cf332d !important; /* Rouge pour le fond des boutons */
+    color: #fff !important; /* Blanc pour le texte des boutons */
+}
+
+/* Style pour le bouton avec bordure */
+.sidenav-footer .btn-outline-primary {
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+    color: #cf332d !important; /* Rouge pour le texte */
+}
+
+/* Style pour le bouton avec bordure au survol */
+.sidenav-footer .btn-outline-primary:hover {
+    background-color: #cf332d !important; /* Rouge pour le fond au survol */
+    color: #fff !important; /* Blanc pour le texte au survol */
+}
+
+/* Style pour réduire la taille des boutons */
+.navbar-nav .nav-item .nav-link {
+    font-size: 14px !important; /* Réduit la taille du texte des boutons */
+    padding: 0.5rem 0.75rem !important; /* Réduit le padding des boutons */
+}
+
+/* Style pour le bouton de pied de page */
+.sidenav-footer .btn {
+    font-size: 14px !important; /* Réduit la taille du texte des boutons de pied de page */
+    padding: 0.5rem !important; /* Réduit le padding des boutons de pied de page */
+}
+
+/* Fichier: sidebar.css */
+/* Assurez-vous que le style pour le bouton Dashboard est bien appliqué */
+#sidenav-main .nav-item a[href="campaign"] {
+    background-color: #cf332d !important; /* Rouge pour le fond du bouton */
+    color: #fff !important; /* Blanc pour le texte du bouton */
+}
+/* Style pour le bouton actif */
+.nav-link.active {
+    background-color: #cf332d !important; /* Rouge pour le fond du bouton actif */
+    color: #fff !important; /* Blanc pour le texte du bouton */
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5) !important; /* Transparent background avec priorité */
+    backdrop-filter: blur(10px) !important; /* Flou avec priorité */
+    -webkit-backdrop-filter: blur(10px) !important; /* Flou compatible WebKit avec priorité */
+    box-shadow: none !important; /* Suppression de l'ombre avec priorité */
+    border-radius: 10px !important; /* Bordure arrondie avec priorité */
+}
+/* Assurez-vous que la classe bg-gradient-primary n'affecte pas le bouton Dashboard */
+.bg-gradient-primary {
+    background: #cf332d !important; /* Rouge pour le fond */
+    color: #fff !important; /* Blanc pour le texte */
+}
+
+/* Pour les autres boutons */
+.btn.bg-gradient-primary {
+    background-color: #cf332d !important; /* Rouge pour le fond des boutons */
+    color: #fff !important; /* Blanc pour le texte des boutons */
+}
+
+/* Style pour le survol des boutons */
+.btn.bg-gradient-primary:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    color: #fff !important; /* Blanc pour le texte au survol */
+    border-radius: 5px;
+}
+/* Style général pour la barre de navigation */
+.navbar {
+    width: 1230px;
+    background-color: white; /* Noir pour le fond */
+    color: #fff; /* Blanc pour le texte */
+    box-shadow: none; /* Suppression de l'ombre portée par défaut */
+    margin-bottom:0px; /* Espacement sous l'élément */
+}
+
+/* Style pour l'input de recherche */
+.input-group-outline {
+    border: 1px solid #cf332d; /* Bordure rouge */
+    border-radius: 5px; /* Bordure arrondie */
+    width: 510px !important; /* Largeur fixe réduite */
+    height: 65px !important;
+}
+
+
+.input-group-outline .form-control {
+    border: none; /* Suppression de la bordure interne */
+    border-radius: 5px; /* Bordure arrondie */
+    color: #fff; /* Blanc pour le texte */
+    background-color: #333; /* Fond gris foncé pour l'input */
+}
+
+/* Style pour le bouton "Create Campaign" */
+.btn-primary {
+    background-color: #cf332d !important; /* Rouge pour le fond */
+    width: 158px;
+    height: 40px;
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+    color: #fff !important; /* Blanc pour le texte */
+    border-radius: 3px !important; /* Bordure arrondie */
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1) !important; /* Ombre portée */
+}
+
+.btn-primary:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    border-color: #a12d25 !important; /* Rouge foncé pour la bordure au survol */
+}
+/* Style pour le conteneur du bouton */
+.btn-container {
+    display: flex;
+    align-items: flex-start; /* Aligne le bouton en haut du conteneur */
+    margin-top: 5px; /* Espacement au-dessus du conteneur du bouton */
+}
+
+/* Style pour le bouton */
+.btn-primary {
+    background-color: #cf332d; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Enlève le soulignement */
+    display: inline-block; /* Permet de définir des marges et des tailles */
+    font-size: 16px; /* Taille du texte du bouton */
+    transition: background-color 0.3s; /* Effet de transition pour la couleur de fond */
+}
+
+.btn-primary:hover {
+    background-color: #a72c22; /* Couleur de fond au survol */
+}
+
+/* Style pour l'icône de profil */
+.profile-icon {
+    color: #cf332d !important; /* Rouge pour l'icône */
+    font-size: 50px; /* Taille de l'icône */
+    margin-right: 1px; /* Espacement à droite */
+}
+
+/* Style pour le lien de déconnexion */
+.logout-link {
+    color: #cf332d !important; /* Rouge pour le texte */
+    font-weight: bold; /* Texte en gras */
+    margin-right: 20px; /* Espacement à droite */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+.logout-link:hover {
+    color: #a12d25 !important; /* Rouge foncé pour le survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Style pour l'élément de la liste */
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; /* Espacement à gauche */
+}
+/* Style pour le bouton "List Archived Campaigns" */
+.btn-list-archived {
+    background-color: #cf332d !important; /* Rouge pour le fond */
+    color: #fff !important; /* Blanc pour le texte */
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+}
+
+.btn-list-archived:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    border-color: #a12d25 !important; /* Rouge foncé pour la bordure au survol */
+}
+
+/* Décalage à gauche pour le bouton */
+.footer .col-lg-6:last-child {
+    text-align: left !important;
+}
+
+.footer .btn-list-archived {
+    margin-left: 350px !important; /* Ajustez le décalage à gauche ici si nécessaire */
+}
+/* Styles pour la carte */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Styles pour le tableau */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #f1f1f1;
+}
+
+.table th {
+    color: #6c757d;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.table td {
+    font-size: 0.875rem;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Style pour les boutons */
+button {
+    border-radius: 6px !important; /* Bord arrondi */
+    margin-left: 50px !important;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1); /* Ombre portée */
+    background-color: #333; /* Rouge pour le fond des boutons */
+    color: #fff; /* Blanc pour le texte des boutons */
+    border: none; /* Retire la bordure par défaut des boutons */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    cursor: pointer; /* Curseur pointeur pour indiquer que c'est cliquable */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour un effet de survol plus fluide */
+}
+
+/* Style pour les boutons au survol */
+button:hover {
+
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 0.7); /* Ombre portée plus marquée au survol */
+}
+/* Applique le style uniquement aux boutons dans les cellules de la table */
+.table td button {
+    border-radius: 4px;
+    width: 110px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.8);
+    background-color: #3a3939 !important;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.table td button:hover {
+    background-color: #c83428 !important;
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 0.7);
+}
+
+/* Styles pour les dropdowns */
+.dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les avatars et autres éléments */
+.avatar-group {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-group span {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+/* Style pour les boutons avec la classe btn-black */
+button.btn-black {
+    background-color: #3a3939 !important; /* Couleur de fond noire */
+    margin-left: 50px !important;
+    margin: 20 700px; /* Espace horizontal entre les boutons */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Enlève la bordure par défaut */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 6px; /* Bord arrondi */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 1); /* Ombre */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+button.btn-bla {
+    background-color: #3a3939 !important; /* Couleur de fond noire */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Enlève la bordure par défaut */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 6px; /* Bord arrondi */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 1); /* Ombre */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+button.btn-black:hover {
+    background-color: #32383c; /* Couleur de fond noire plus claire au survol */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 1;
+    display: none; /* Caché par défaut */
+}
+
+/* Conteneur pour le formulaire */
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    width:60%;
+    max-width: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Caché par défaut */
+}
+
+.form-container-update {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    width:60%;
+    max-width: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Caché par défaut */
+}
+
+/* Styles pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+input, select, button {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 1);
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+/* Styles pour la balise h3 dans le formulaire de création de prix */
+.form-container h1 {
+    font-size: 24px; /* Taille du texte du titre */
+    color:#333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-weight: 700; /* Poids de la police pour un effet plus prononcé */
+    text-align: center; /* Centrer le texte horizontalement */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Ombre du texte pour un effet plus sombre */
+}
+/* Styles pour le tableau des prix archivés */
+.archived-prizes {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900vw; /* Augmenter la largeur maximale */
+    max-height: 900vh; /* Augmenter la hauteur maximale */
+    overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styles pour le tableau dans la liste des archives */
+.archived-prizes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.archived-prizes th, .archived-prizes td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.archived-prizes th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.archived-prizes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.archived-prizes tr:hover {
+    background-color: #f1f1f1;
+}
+
+.archived-prizes button {
+    background-color: BLACK; /* Couleur rouge pour le bouton */
+    color: white;
+    border: none;
+    width: 150px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.archived-prizes button:hover {
+    background-color: #333; /* Couleur rouge plus foncée au survol */
+}
+
+/* Style pour le bouton de fermeture */
+.archived-prizes .close-btn {
+    background-color: #333; /* Couleur rouge pour le bouton */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.archived-prizes .close-btn:hover {
+    background-color: #333; /* Couleur rouge plus foncée au survol */
+}
+.archived-prizes h1 {
+    font-size: 24px; /* Taille du texte du titre */
+    color:#333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-weight: 700; /* Poids de la police pour un effet plus prononcé */
+    text-align: center; /* Centrer le texte horizontalement */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Ombre du texte pour un effet plus sombre */
+}
+
+.dashboard-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"],
+a {
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #cf332d;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #b42c23;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.draw-button {
+    background-color: black !important; /* Couleur de fond noire */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Supprime la bordure */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de la souris en pointeur */
+    display: block; /* Affichage en bloc */
+    margin: 20px auto; /* Centrer horizontalement */
+    text-align: center !important; /* Centrer le texte */
+}
+
+.draw-button:hover {
+    background-color: #333; /* Couleur légèrement plus claire au survol */
+}
+/* Style pour le container */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+h2 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Style pour l'alerte de succès */
+.alert-success {
+    background-color: #d4edda;
+    color: #49b561;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Style de la table */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #cac5c5;
+}
+
+.table tbody tr:hover {
+    background-color: #cac5c5;
+}
+
+/* Couleurs spécifiques */
+.table th {
+    font-weight: bold;
+}
+
+.table td {
+    color: #333;
+}
+
+/* Alignement et style des boutons (si besoin) */
+.btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: black;
+    color:black;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+/* Autres ajustements */
+.table td:first-child, .table th:first-child {
+    border-left: 0;
+}
+
+.table td:last-child, .table th:last-child {
+    border-right: 0;
+}#sidenav-main {
+     background-color: #000; /* Noir pour le fond */
+     color: #fff; /* Blanc pour le texte */
+ }
+
+/* Style pour l'en-tête de la barre latérale */
+.sidenav-header {
+    background-color: #cf332d; /* Rouge pour l'en-tête */
+    padding: 1rem;
+}
+
+/* Style pour l'image du logo */
+.logo-image {
+    width: 90px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-item-sidebar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0); /* Ligne de séparation légère */
+    margin-bottom: 2rem; /* Ajoute de l'espace entre les éléments */
+}
+
+/* Style pour les liens de navigation */
+.nav-link {
+    color: #fff; /* Blanc pour les liens */
+    padding: 0.5rem 1rem;
+    text-decoration: none; /* Supprime la sous-ligne des liens */
+    display: flex;
+    align-items: center;
+    font-size: 9rem; /* Augmente légèrement la taille de la police */
+}
+/* Style pour les boutons de la barre latérale */
+
+.nav-link.active {
+    background-color: #cf332d !important;
+    color: white !important;
+}
+
+/* Style pour les boutons non actifs */
+.navbar-nav .nav-item .nav-link {
+    color: #fff !important; /* Blanc pour le texte des boutons non actifs */
+}
+
+/* Style pour le survol des boutons */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #cf332d !important; /* Rouge foncé pour le survol */
+}
+/* Style pour la ligne transparente ajoutée avant "Account pages" */
+.transparent-line {
+    border: none; /* Supprime les bordures par défaut */
+    border-top: 1px solid rgba(255, 255, 255, 0.4); /* Ligne transparente avec une couleur légère */
+    margin: 1rem 0; /* Espace au-dessus et en-dessous de la ligne */
+}
+/* Style pour les éléments du pied de page */
+.sidenav-footer .nav-item {
+    margin-bottom: 0.5rem; /* Espace entre les éléments du pied de page */
+}
+
+/* Style pour les boutons de pied de page */
+.sidenav-footer .btn {
+    background-color: #cf332d !important; /* Rouge pour le fond des boutons */
+    color: #fff !important; /* Blanc pour le texte des boutons */
+}
+
+/* Style pour le bouton avec bordure */
+.sidenav-footer .btn-outline-primary {
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+    color: #cf332d !important; /* Rouge pour le texte */
+}
+
+/* Style pour le bouton avec bordure au survol */
+.sidenav-footer .btn-outline-primary:hover {
+    background-color: #cf332d !important; /* Rouge pour le fond au survol */
+    color: #fff !important; /* Blanc pour le texte au survol */
+}
+
+/* Style pour réduire la taille des boutons */
+.navbar-nav .nav-item .nav-link {
+    font-size: 14px !important; /* Réduit la taille du texte des boutons */
+    padding: 0.5rem 0.75rem !important; /* Réduit le padding des boutons */
+}
+
+/* Style pour le bouton de pied de page */
+.sidenav-footer .btn {
+    font-size: 14px !important; /* Réduit la taille du texte des boutons de pied de page */
+    padding: 0.5rem !important; /* Réduit le padding des boutons de pied de page */
+}
+
+/* Fichier: sidebar.css */
+/* Assurez-vous que le style pour le bouton Dashboard est bien appliqué */
+#sidenav-main .nav-item a[href="campaign"] {
+    background-color: #cf332d !important; /* Rouge pour le fond du bouton */
+    color: #fff !important; /* Blanc pour le texte du bouton */
+}
+/* Style pour le bouton actif */
+.nav-link.active {
+    background-color: #cf332d !important; /* Rouge pour le fond du bouton actif */
+    color: #fff !important; /* Blanc pour le texte du bouton */
+}
+
+/* Assurez-vous que la classe bg-gradient-primary n'affecte pas le bouton Dashboard */
+.bg-gradient-primary {
+    background: #cf332d !important; /* Rouge pour le fond */
+    color: #fff !important; /* Blanc pour le texte */
+}
+
+/* Pour les autres boutons */
+.btn.bg-gradient-primary {
+    background-color: #cf332d !important; /* Rouge pour le fond des boutons */
+    color: #fff !important; /* Blanc pour le texte des boutons */
+}
+
+/* Style pour le survol des boutons */
+.btn.bg-gradient-primary:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    color: #fff !important; /* Blanc pour le texte au survol */
+    border-radius: 5px;
+}
+/* Style général pour la barre de navigation */
+.navbar {
+    width: 1230px;
+    background-color: white; /* Noir pour le fond */
+    color: #fff; /* Blanc pour le texte */
+    box-shadow: none; /* Suppression de l'ombre portée par défaut */
+    margin-bottom:0px; /* Espacement sous l'élément */
+}
+
+/* Style pour l'input de recherche */
+.input-group-outline {
+    border: 1px solid #cf332d; /* Bordure rouge */
+    border-radius: 5px; /* Bordure arrondie */
+}
+
+.input-group-outline .form-control {
+    border: none; /* Suppression de la bordure interne */
+    border-radius: 5px; /* Bordure arrondie */
+    color: #fff; /* Blanc pour le texte */
+    background-color: #333; /* Fond gris foncé pour l'input */
+}
+
+/* Style pour le bouton "Create Campaign" */
+.btn-primary {
+    background-color: #cf332d !important; /* Rouge pour le fond */
+    width: 158px;
+    height: 40px;
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+    color: #fff !important; /* Blanc pour le texte */
+    border-radius: 3px !important; /* Bordure arrondie */
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1) !important; /* Ombre portée */
+}
+
+.btn-primary:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    border-color: #a12d25 !important; /* Rouge foncé pour la bordure au survol */
+}
+/* Style pour le conteneur du bouton */
+.btn-container {
+    display: flex;
+    align-items: flex-start; /* Aligne le bouton en haut du conteneur */
+    margin-top: 5px; /* Espacement au-dessus du conteneur du bouton */
+}
+
+/* Style pour le bouton */
+.btn-primary {
+    background-color: #cf332d; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Enlève la bordure */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Enlève le soulignement */
+    display: inline-block; /* Permet de définir des marges et des tailles */
+    font-size: 16px; /* Taille du texte du bouton */
+    transition: background-color 0.3s; /* Effet de transition pour la couleur de fond */
+}
+
+.btn-primary:hover {
+    background-color: #a72c22; /* Couleur de fond au survol */
+}
+
+/* Style pour l'icône de profil */
+.profile-icon {
+    color: #cf332d !important; /* Rouge pour l'icône */
+    font-size: 50px; /* Taille de l'icône */
+    margin-right: 1px; /* Espacement à droite */
+}
+
+/* Style pour le lien de déconnexion */
+.logout-link {
+    color: #cf332d !important; /* Rouge pour le texte */
+    font-weight: bold; /* Texte en gras */
+    margin-right: 20px; /* Espacement à droite */
+    text-decoration: none; /* Suppression du soulignement */
+}
+
+.logout-link:hover {
+    color: #a12d25 !important; /* Rouge foncé pour le survol */
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Style pour l'élément de la liste */
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; /* Espacement à gauche */
+}
+/* Style pour le bouton "List Archived Campaigns" */
+.btn-list-archived {
+    background-color: #cf332d !important; /* Rouge pour le fond */
+    color: #fff !important; /* Blanc pour le texte */
+    border-color: #cf332d !important; /* Rouge pour la bordure */
+}
+
+.btn-list-archived:hover {
+    background-color: #a12d25 !important; /* Rouge foncé pour le survol */
+    border-color: #a12d25 !important; /* Rouge foncé pour la bordure au survol */
+}
+
+/* Décalage à gauche pour le bouton */
+.footer .col-lg-6:last-child {
+    text-align: left !important;
+}
+
+.footer .btn-list-archived {
+    margin-left: 350px !important; /* Ajustez le décalage à gauche ici si nécessaire */
+}
+/* Styles pour la carte */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Styles pour le tableau */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #f1f1f1;
+}
+
+.table th {
+    color: #6c757d;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.table td {
+    font-size: 0.875rem;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Style pour les boutons */
+button {
+    border-radius: 6px !important; /* Bord arrondi */
+    margin-left: 50px !important;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 1); /* Ombre portée */
+    background-color: #333; /* Rouge pour le fond des boutons */
+    color: #fff; /* Blanc pour le texte des boutons */
+    border: none; /* Retire la bordure par défaut des boutons */
+    padding: 0.5rem 1rem; /* Espacement interne */
+    cursor: pointer; /* Curseur pointeur pour indiquer que c'est cliquable */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition pour un effet de survol plus fluide */
+}
+
+/* Style pour les boutons au survol */
+button:hover {
+
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 0.7); /* Ombre portée plus marquée au survol */
+}
+/* Applique le style uniquement aux boutons dans les cellules de la table */
+.table td button {
+    border-radius: 5px;
+    width: 110px;
+    box-shadow: 1px 2px 5px rgba(1, 1, 1, 0.8);
+    background-color: #cf332d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.table td button:hover {
+    background-color: #a12d25;
+    box-shadow: 2px 4px 8px rgba(1, 1, 1, 0.7);
+}
+
+/* Styles pour les dropdowns */
+.dropdown-menu {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les avatars et autres éléments */
+.avatar-group {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-group span {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+/* Style pour les boutons avec la classe btn-black */
+button.btn-black {
+    background-color: #3b3f45 !important; /* Couleur de fond noire */
+    margin-left: 50px !important;
+    margin: 20 700px; /* Espace horizontal entre les boutons */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Enlève la bordure par défaut */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 6px; /* Bord arrondi */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 1); /* Ombre */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+button.btn-bla {
+    background-color: #3b3f45 !important; /* Couleur de fond noire */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Enlève la bordure par défaut */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 6px; /* Bord arrondi */
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 1); /* Ombre */
+    cursor: pointer; /* Curseur en forme de main */
+    font-size: 14px; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Effet de transition pour le survol */
+}
+button.btn-black:hover {
+    background-color: #32383c; /* Couleur de fond noire plus claire au survol */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    z-index: 1;
+    display: none; /* Caché par défaut */
+}
+
+/* Conteneur pour le formulaire */
+.form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    width:60%;
+    max-width: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Caché par défaut */
+}
+
+.form-container-update {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    width:60%;
+    max-width: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: none; /* Caché par défaut */
+}
+
+/* Styles pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+input, select, button {
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, 1);
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+/* Styles pour la balise h3 dans le formulaire de création de prix */
+.form-container h1 {
+    font-size: 24px; /* Taille du texte du titre */
+    color:#333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-weight: 700; /* Poids de la police pour un effet plus prononcé */
+    text-align: center; /* Centrer le texte horizontalement */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Ombre du texte pour un effet plus sombre */
+}
+/* Styles pour le tableau des prix archivés */
+.archived-prizes {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 900vw; /* Augmenter la largeur maximale */
+    max-height: 900vh; /* Augmenter la hauteur maximale */
+    overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styles pour le tableau dans la liste des archives */
+.archived-prizes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.archived-prizes th, .archived-prizes td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.archived-prizes th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.archived-prizes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.archived-prizes tr:hover {
+    background-color: #f1f1f1;
+}
+
+.archived-prizes button {
+    background-color: BLACK; /* Couleur rouge pour le bouton */
+    color: white;
+    border: none;
+    width: 150px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.archived-prizes button:hover {
+    background-color: #333; /* Couleur rouge plus foncée au survol */
+}
+
+/* Style pour le bouton de fermeture */
+.archived-prizes .close-btn {
+    background-color: #333; /* Couleur rouge pour le bouton */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.archived-prizes .close-btn:hover {
+    background-color: #333; /* Couleur rouge plus foncée au survol */
+}
+.archived-prizes h1 {
+    font-size: 24px; /* Taille du texte du titre */
+    color:#333; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-weight: 700; /* Poids de la police pour un effet plus prononcé */
+    text-align: center; /* Centrer le texte horizontalement */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Ombre du texte pour un effet plus sombre */
+}
+
+.dashboard-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"],
+a {
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: limegreen;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: green;
+}
+
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.draw-button {
+    background-color: black !important; /* Couleur de fond noire */
+    color: white; /* Couleur du texte en blanc */
+    border: none; /* Supprime la bordure */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de la souris en pointeur */
+    display: block; /* Affichage en bloc */
+    margin: 20px auto; /* Centrer horizontalement */
+    text-align: center !important; /* Centrer le texte */
+}
+
+.draw-button:hover {
+    background-color: #333; /* Couleur légèrement plus claire au survol */
+}
+/* Style général pour le conteneur principal */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Style des champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #333;
+}
+
+/* Barre de tirage */
+.draw-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    position: relative; /* Assurez-vous que la position est relative */
+}
+
+.party-icon {
+    font-size: 110px; /* Taille augmentée */
+    position: absolute;
+    top: 5%; /* Positionnement plus haut */
+    transform: translateY(-50%); /* Centre verticalement */
+    display: none; /* Masqué par défaut */
+    z-index: 9999; /* Assurez-vous qu'elles sont au-dessus des autres éléments */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour plus de visibilité */
+}
+
+.party-icon.left {
+    left: 10px; /* Positionnement à gauche */
+    top: 5%; /* Positionner plus haut */
+}
+
+.party-icon.right {
+    right: 10px; /* Positionnement à droite */
+    top: 5%; /* Positionner plus bas que l'icône gauche */
+}
+
+
+
+
+/* Ajouter une animation de rebond */
+@keyframes party-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.party-icon {
+    animation: party-bounce 3s ease-in-out infinite; /* Animation continue */
+}
+.party-icon {
+    display: none;
+}
+
+
+/* Animation du défilement des nombres */
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.number-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: scroll 3s linear infinite;
+}
+
+/* Animation festive pour le gagnant */
+@keyframes celebration {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes confetti {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+/* Effet de victoire */
+.winner-display {
+    font-size: 36px;
+    color: #28a745;
+    animation: celebration 1s ease-in-out infinite;
+}
+
+/* Barre de tirage gagnante */
+.draw-bar.win {
+    background-color: orange; /* Jaune festif */
+    position: relative;
+}
+
+/* Confettis */
+.confetti {
+    position: absolute;
+    width: 17px; /* Taille augmentée */
+    height: 15px; /* Taille augmentée */
+    background-color: red; /* Couleur par défaut */
+    animation: confetti 3s linear infinite; /* Durée de l'animation légèrement plus longue */
+    opacity: 0.8; /* Opacité augmentée pour plus de visibilité */
+    z-index: 9999; /* Assurez-vous que les confettis sont au-dessus des autres éléments */
+}
+
+/* Confettis supplémentaires avec des couleurs variées */
+.confetti:nth-child(2n) { background-color: blue; }
+.confetti:nth-child(3n) { background-color: green; }
+.confetti:nth-child(5n) { background-color: orange; }
+.confetti:nth-child(6n) { background-color: purple; }
+.confetti:nth-child(7n) { background-color: #e46f82; }
+
+/* Animation des confettis */
+@keyframes confetti {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Positionnement des confettis autour de la barre */
+.confetti {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Boutons de tirage */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Bouton caché jusqu'à ce que le gagnant soit sélectionné */
+#save-winner-btn {
+    display: none;
+}
+
+/* Animation des boutons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-primary:active, .btn-success:active {
+    animation: pulse 0.3s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.card-header {
+    background-color: #cf332d;
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dropdown-toggle {
+    background-color: #ffffff;
+    color: #cf332d;
+    border: 1px solid #cf332d;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+/* Table Styling */
+.table {
+    margin: 0;
+    border-spacing: 0 15px;
+    color: #333;
+}
+
+.table thead th {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #555;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding-bottom: 12px;
+}
+
+.table tbody tr {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table td, .table th {
+    padding: 15px;
+    vertical-align: middle;
+}
+
+/* Buttons Styling */
+.btn-sm {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style pour le conteneur principal de la page */
+.dashboard-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Liste des campagnes */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bouton de restauration */
+button {
+    background-color: #333; /* Couleur de fond noir */
+    color: #fff; /* Couleur du texte blanc */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555; /* Changer la couleur au survol */
+}
+.custom-red-background {
+    background-color: red !important;
+}
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Aligne le contenu vers le haut de la page */
+    min-height: 100vh; /* Hauteur de la page complète */
+    padding-top: 20px; /* Espace au-dessus du formulaire */
+    background-color: #f0f0f0; /* Arrière-plan optionnel */
+    box-sizing: border-box;
+}
+/* Form Container */
+.form-wrapper {
+    width: 450px;
+    height: 530px;
+    max-width: 900px; /* Limite la largeur du formulaire */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px; /* Réduction du padding pour diminuer la longueur du formulaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin: 20px;
+    border: 1px solid #cf332d; /* Ajoute une bordure rouge */
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px; /* Taille de l'image réduite */
+    height: auto;
+}
+
+/* Form Styles */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #cf332d;
+    outline: none;
+}
+
+/* Position the input wrapper relative */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Leave space for the icon on the right */
+}
+
+/* Icon styling */
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Position the icon on the right inside the input */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Adjust the input field when the icon is present */
+.input-wrapper input {
+    padding-right: 35px; /* Space for the eye icon on the right */
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.register-btn {
+    background-color: #cf332d !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 360px; /* Réduire la largeur du bouton */
+    margin: 0 auto; /* Centre le bouton horizontalement */
+    display: block; /* Assure que le bouton est en bloc pour la centrer */
+}
+
+
+.register-btn:hover {
+    background-color: #b62b26;
+}
+
+/* Additional Styles */
+p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+p a {
+    color: #cf332d;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .form-wrapper {
+        padding: 15px;
+    }
+}
+
+.register-title {
+    display: block;            /* Affiche le texte en tant que bloc pour centrer facilement */
+    text-align: center;       /* Centre le texte */
+    font-size: 32px;          /* Ajuste la taille de la police */
+    font-weight: bold;        /* Rend le texte en gras */
+    color: #333333;           /* Change la couleur du texte (rouge dans votre cas) */
+    margin-bottom: 20px;      /* Ajoute de l'espace en bas */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 1px;      /* Ajoute un espacement entre les lettres */
+    font-family: 'Lucida Calligraphy' ; /* Change la police (vous pouvez en choisir une autre) */
+}
+.registration-text {
+    color: #ec332c;
+    font-size: 1.0rem; /* Augmente la taille du texte */
+}
+
+
