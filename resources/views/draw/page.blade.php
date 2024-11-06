@@ -1,17 +1,19 @@
 @extends('partials.template')
 
 @section('content')
+
     <div class="container">
 
         <form id="draw-form" action="{{ route('draw.perform') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="campaign">Select a Campaign</label>
-                <select name="campaign_id" id="campaign" class="form-control" onchange="loadPrizes(this.value)">
+                <select id="campaign" onchange="loadPrizes(this.value)">
                     @foreach($campaigns as $campaign)
                         <option value="{{ $campaign->id }}">{{ $campaign->name }}</option>
                     @endforeach
                 </select>
+
             </div>
             <div class="form-group">
                 <label for="prize">Select a Prize</label>
@@ -126,21 +128,24 @@
         let drawInProgress = false;
 
         function loadPrizes(campaignId) {
-            fetch(`/campaigns/${campaignId}/prizes`)
-                .then(response => response.json())
-                .then(prizes => {
-                    let prizeSelect = document.getElementById('prize');
-                    prizeSelect.innerHTML = '';
-                    prizes.forEach(prize => {
-                        prizeSelect.innerHTML += `<option value="${prize.id}">${prize.name}</option>`;
+            $.ajax({
+                url: '/campaigns/' + campaignId + '/physical-prizes',
+                method: 'GET',
+                success: function(data) {
+                    let prizeSelect = $('#prize');
+                    prizeSelect.empty();
+                    data.forEach(function(prize) {
+                        prizeSelect.append(`<option value="${prize.id}">${prize.name}</option>`);
                     });
-                })
-                .catch(error => {
-                    console.error('Erreur lors du chargement des prix:', error);
-                });
+                },
+                error: function(error) {
+                    console.log("Erreur:", error);
+                }
+            });
         }
 
         function startDraw() {
+            console.log("Début de startDraw");
             if (drawInProgress) return; // Empêcher plusieurs clics
 
             drawInProgress = true; // Tirage en cours

@@ -1,8 +1,8 @@
 @extends('partials.template')
 
 @section('content')
-    <div class="container">
 
+    <div class="container">
 
         @if(session('phone') && session('prize_id'))
             <div class="alert alert-success">

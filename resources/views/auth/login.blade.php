@@ -65,13 +65,15 @@
         @endif
         @csrf
         <div class="form-group">
-            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required autocomplete="username">
+
             @error('username')
             <div class="error">{{ $message }}</div>
             @enderror
         </div>
         <div class="form-group">
-            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required autocomplete="current-password">
+
             <i class="fas fa-eye eye-icon" onclick="togglePasswordVisibility()"></i>
             @error('password')
 

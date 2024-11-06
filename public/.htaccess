@@ -2,8 +2,9 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
+AddType font/woff2 .woff2
 
-    RewriteEngine On
+ RewriteEngine On
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -18,4 +19,12 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|woff2|png|jpg|gif)$">
+        Header set Cache-Control "max-age=31536000, immutable"
+    </FilesMatch>
 </IfModule>
+
+

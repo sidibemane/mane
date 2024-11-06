@@ -1846,5 +1846,8 @@ p a:hover {
     color: #ec332c;
     font-size: 1.0rem; /* Augmente la taille du texte */
 }
-
+.btn-stopped {
+    background-color: red !important; /* Couleur rouge pour le bouton stoppé */
+    color: white !important;           /* Texte en blanc */
+}
 

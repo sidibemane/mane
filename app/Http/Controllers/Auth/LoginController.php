@@ -32,6 +32,9 @@ class LoginController extends Controller
             // Charger la relation `role` de l'utilisateur
             $user = Auth::user()->load('role');
 
+            // Vérifiez les données utilisateur pour débogage
+            \Log::info('Utilisateur connecté: ', ['username' => $user->username, 'role' => $user->role->name]);
+
             // Vérifier le rôle de l'utilisateur
             if ($user->role && $user->role->name !== 'admin') {
                 Auth::logout(); // Déconnexion si ce n'est pas un administrateur
@@ -47,6 +50,7 @@ class LoginController extends Controller
             'username' => 'Les informations d\'identification fournies ne correspondent pas à nos enregistrements.',
         ]);
     }
+
 
     public function logout(Request $request)
     {

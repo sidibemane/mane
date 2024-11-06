@@ -24,12 +24,6 @@ class AutomationController extends Controller
     }
 
 
-
-
-
-    // Affiche le formulaire de création d'une automatisation
-    // AutomationController.php
-
     public function create()
     {
         $campaigns = Campaign::all();
@@ -53,11 +47,18 @@ class AutomationController extends Controller
 
         return redirect()->route('automations.index')->with('success', 'Automatisation créée avec succès !');
     }
-    public function showWinners($automationId)
+    public function showAutomationWinners($automationId)
     {
-        $winners = Winner::where('automation_id', $automationId)->get(); // Adaptez la condition en fonction de votre structure
-        return view('winners.index', compact('winners'));
+        // Trouver l'automatisation par son ID
+        $automation = Automation::findOrFail($automationId);
+
+        // Récupérer les gagnants associés à cette automatisation
+        $winners = Winner::where('automation_id', $automationId)->get();
+
+        // Retourner la vue avec l'automatisation et ses gagnants
+        return view('automations.winners', compact('automation', 'winners'));
     }
+
 
     public function showNonPhysicalWinners($automationId)
     {
@@ -80,15 +81,27 @@ class AutomationController extends Controller
         // Charger les données nécessaires (comme les campagnes ou les lots disponibles)
         return view('automations.edit', compact('automation'));
     }
+
     public function stop($id)
     {
-        $automation = Automation::findOrFail($id);
-        $automation->status = 'Arrêté'; // Par exemple, définissez le statut sur "Arrêté"
-        $automation->save();
+        $automation = Automation::find($id);
 
-        return redirect()->route('automations.index')->with('success', 'Automatisation arrêtée avec succès.');
+        if ($automation) {
+            if ($automation->is_stopped) {
+                // Reprendre l'automatisation sans toucher au champ `status`
+                $automation->is_stopped = false;
+            } else {
+                // Arrêter l'automatisation sans toucher au champ `status`
+                $automation->is_stopped = true;
+            }
+
+            $automation->save();
+
+            return redirect()->route('automations.index')->with('success', 'Automatisation mise à jour avec succès.');
+        } else {
+            return redirect()->route('automations.index')->with('error', 'Automatisation introuvable.');
+        }
     }
-
 
 
     public function getPrizesForCampaign($campaignId)

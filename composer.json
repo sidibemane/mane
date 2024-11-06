@@ -7,7 +7,8 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.16",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "spatie/laravel-csp": "^2.10"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -59,7 +60,8 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true,
             "http-proxy": false,
-            "https-proxy": false
+            "https-proxy": false,
+            "timeout": true
         }
     },
     "minimum-stability": "stable",

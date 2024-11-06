@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        // Planifie la commande pour s'exécuter chaque minute
         $schedule->command('draws:run')->everyMinute();
     }
 
@@ -39,6 +40,5 @@ class Kernel extends ConsoleKernel
 
         // Enregistrement des commandes dans les fichiers de routes
         require base_path('routes/console.php');
-        $this->command('draws:run', \App\Console\Commands\DrawsRun::class);
     }
 }

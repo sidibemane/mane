@@ -31,9 +31,18 @@ class CampaignController extends Controller
         $campaigns = Campaign::where('archived', false)->get();
         return view('campaigns.dashboard', compact('campaigns'));
     }
-    public function getPrizes($campaignId)
+    public function getPhysicalPrizes($campaignId)
     {
         $prizes = Prize::where('campaign_id', $campaignId)->get();
+        return response()->json($prizes);
+    }
+
+    public function getNonPhysicalPrizes($campaignId)
+    {
+        $prizes = Prize::where('campaign_id', $campaignId)
+            ->where('type', 'Non_Physique') // Assurez-vous d'utiliser le bon nom pour le type
+            ->get();
+
         return response()->json($prizes);
     }
 
@@ -97,21 +106,6 @@ class CampaignController extends Controller
             'moisPrize', 'nombrePrize'
         ));
     }
-    public function getNonPhysicalPrizes($campaignId)
-    {
-        try {
-            $prizes = Prize::where('campaign_id', $campaignId)
-                ->where('type', 'Non_Physique') // Changez ici pour correspondre à la base de données
-                ->get();
-
-            return response()->json($prizes);
-        } catch (\Exception $e) {
-            \Log::error('Error fetching non-physical prizes: '.$e->getMessage());
-            return response()->json(['error' => 'Failed to fetch prizes'], 500);
-        }
-    }
-
-
 
 
     public function create()

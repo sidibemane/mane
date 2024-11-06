@@ -27,6 +27,7 @@ class DrawController extends Controller
 
         // Retourner la vue avec les campagnes
         return view('draw.page', compact('campaigns'));
+
     }
     /**
      * Récupère les prix associés à une campagne via AJAX.

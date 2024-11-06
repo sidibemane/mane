@@ -58,10 +58,11 @@
                             <form action="{{ route('automations.stop', $automation->id) }}" method="POST" style="display: inline-block; margin-left: 0;">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir arrêter cette automatisation ?');" title="Arrêter l'automatisation" style="width: 55px; height: 40px;">
-                                    <i class="fas fa-pause"></i> <!-- Icône Pause -->
+                                <button type="submit" class="btn {{ $automation->is_stopped ? 'btn-stopped' : 'btn-danger' }}" onclick="return confirm('Êtes-vous sûr de vouloir {{ $automation->is_stopped ? 'reprendre' : 'arrêter' }} cette automatisation ?');" title="{{ $automation->is_stopped ? 'Reprendre l’automatisation' : 'Arrêter l’automatisation' }}" style="width: 55px; height: 40px;">
+                                    <i class="fas {{ $automation->is_stopped ? 'fa-play' : 'fa-pause' }}"></i>
                                 </button>
                             </form>
+
                         </td>
 
                     </tr>

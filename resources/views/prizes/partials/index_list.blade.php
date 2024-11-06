@@ -103,11 +103,11 @@
                                         </div>
                                     </td>
                                     <td class="align-middle text-center text-sm">
-                                        <button style="background-color: #28a745 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; font-size: 14px !important; width:  46px !important; height: 35px !important;" onclick="showUpdatePrizeForm({{ $prize->id }})">
+                                        <button style="background-color: #28a745 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; font-size: 14px !important; width:  50px !important; height: 35px !important;" onclick="showUpdatePrizeForm({{ $prize->id }})">
                                             <i class="material-icons">edit</i>
                                         </button>
 
-                                        <button style="background-color: #ffc107 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; width: 42px !important; height: 35px !important; font-size: 14px !important;" onclick="archivePrize({{ $prize->id }})">
+                                        <button style="background-color: #FB8C00 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; width: 50px !important; height: 35px !important; font-size: 14px !important;" onclick="archivePrize({{ $prize->id }})">
                                             <i class="material-icons" style="font-size: 24px;">archive</i>
                                         </button>
 

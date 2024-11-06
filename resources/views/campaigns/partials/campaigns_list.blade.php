@@ -26,13 +26,14 @@
                                     <span>{{ $campaign->start_date }} - {{ $campaign->end_date }}</span>
                                 </td>
                                 <td class="align-middle text-center">
-                                    <button style="background-color: #28a745 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; font-size: 14px !important; width: 46px !important; height: 35px !important;" onclick="window.location.href='{{ route('campaigns.edit', $campaign->id) }}'">
+                                    <button style="background-color: #28a745 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; font-size: 14px !important; width: 50px !important; height: 35px !important;" onclick="window.location.href='{{ route('campaigns.edit', $campaign->id) }}'">
                                         <i class="material-icons" style="vertical-align: middle !important;">edit</i>
                                     </button>
 
-                                    <button style="background-color: #eccd1c !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; width: 42px !important; height: 35px !important; font-size: 14px !important;" onclick="archiveCampaign({{ $campaign->id }})">
+                                    <button style="background-color: #FB8C00 !important; border: none !important; padding: 5px !important; border-radius: 5px !important; color: white !important; cursor: pointer !important; width: 50px !important; height: 35px !important; font-size: 14px !important;" onclick="archiveCampaign({{ $campaign->id }})">
                                         <i class="material-icons" style="font-size: 24px;">archive</i>
                                     </button>
+
 
                                 </td>
                             </tr>

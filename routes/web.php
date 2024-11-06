@@ -12,6 +12,7 @@ use App\Models\Campaign;
 use Illuminate\Http\Request;
 use App\Console\RunDraws;
 
+
 // Routes d'authentification
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
@@ -20,8 +21,9 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
+
 // Routes de campagnes et tableau de bord
-    Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [CampaignController::class, 'index'])->name('dashboard');
     Route::get('/template', [CampaignController::class, 'template'])->name('template');
     Route::get('/campaigns/create', [CampaignController::class, 'create'])->name('campaigns.create');
@@ -67,11 +69,15 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
         Route::get('/automations', [AutomationController::class, 'index'])->name('automations.index');
         Route::get('/automations/create', [AutomationController::class, 'create'])->name('automations.create');
         Route::post('/automations', [AutomationController::class, 'store'])->name('automations.store');
+
         Route::get('/automations/{automation}/winners', [AutomationController::class, 'showWinners'])->name('automations.winners');
         Route::get('/get-prizes/{campaign_id}', [PrizeController::class, 'getPrizes']);
         Route::get('/campaigns/{campaignId}/prizes', [CampaignController::class, 'getNonPhysicalPrizes']);
         Route::get('/campaigns/{campaign}/prizes', [CampaignController::class, 'getNonPhysicalPrizes']);
         Route::get('/campaigns/{campaignId}/winners', [AutomationController::class, 'showWinners'])->name('automations.showWinners');
+    Route::get('/campaigns/{id}/prizes', [CampaignController::class, 'getPhysicalPrizes']); // Pour les lots physiques
+    Route::get('/campaigns/{id}/non-physical-prizes', [CampaignController::class, 'getNonPhysicalPrizes']); // Pour les lots non physiques
+    Route::get('/campaigns/{campaign}/physical-prizes', [CampaignController::class, 'getPhysicalPrizes']);
 
         Route::get('/automation/winner', [AutomationController::class, 'showWinners']);
         Route::get('/automations/{automation}/winner', [AutomationController::class, 'showNonPhysicalWinners'])->name('automations.winner');
