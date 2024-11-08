@@ -69,8 +69,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/automations', [AutomationController::class, 'index'])->name('automations.index');
         Route::get('/automations/create', [AutomationController::class, 'create'])->name('automations.create');
         Route::post('/automations', [AutomationController::class, 'store'])->name('automations.store');
+    Route::get('automations/{id}/edit', [AutomationController::class, 'edit'])->name('automations.edit');
+    Route::put('/automations/{id}', [AutomationController::class, 'update'])->name('automations.update');
 
-        Route::get('/automations/{automation}/winners', [AutomationController::class, 'showWinners'])->name('automations.winners');
+    Route::get('/automations/{id}/winner', [AutomationController::class, 'nonPhysicalWinner'])->name('automations.nonPhysicalWinner');
+
+    Route::get('/automations/{automation}/winners', [AutomationController::class, 'showWinners'])->name('automations.winners');
         Route::get('/get-prizes/{campaign_id}', [PrizeController::class, 'getPrizes']);
         Route::get('/campaigns/{campaignId}/prizes', [CampaignController::class, 'getNonPhysicalPrizes']);
         Route::get('/campaigns/{campaign}/prizes', [CampaignController::class, 'getNonPhysicalPrizes']);
@@ -86,9 +90,16 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/campaigns/{id}/details', [CampaignController::class, 'getCampaignDetails']);
         Route::get('/automations/{id}/edit', [AutomationController::class, 'edit'])->name('automations.edit');
         Route::patch('/automations/{id}/stop', [AutomationController::class, 'stop'])->name('automations.stop');
+    Route::get('/automations/{automation}/non-physical-winner', [AutomationController::class, 'showWinners'])->name('automations.nonPhysicalWinner');
+
+    //Route::get('/automations/{automationId}/non-physical-winner', [AutomationController::class, 'showWinners'])->name('automations.nonPhysicalWinner');
+    //Route::get('/automations/{automationId}/non-physical-winner', [AutomationController::class, 'showWinners'])->name('automations.non-physical-winner');
+
+    //Route::get('/automations/{automationId}/non-physical-winner', [AutomationController::class, 'showWinners'])->name('automations.non-physical-winner');
+    //Route::get('/automations/{automationId}/non-physical-winner', [AutomationController::class, 'showWinners'])->name('automations.non-physical-winner');
 
 
-        Route::get('/automations/prizes/{campaign}', [AutomationController::class, 'getPrizesForCampaign']);
+    Route::get('/automations/prizes/{campaign}', [AutomationController::class, 'getPrizesForCampaign']);
         Route::get('/prizes/campaign/{campaign_id}', [PrizeController::class, 'getPrizes'])->name('prizes.getPrizes');
     });
 

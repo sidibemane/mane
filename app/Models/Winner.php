@@ -13,6 +13,7 @@ class Winner extends Model
         'phone',
         'campaign_id',
         'prize_id',
+        'automation_id'
     ];
 
     public function campaign()

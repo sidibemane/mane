@@ -116,6 +116,7 @@ class RunDraws extends Command
             'prize_id' => $automation->prize_id,
             'phone' => $winnerPhone,
             'campaign_id' => $automation->campaign_id,  // Ajout de campaign_id ici
+            'automation_id'=>$automation->id,
             'date' => now(),
         ]);
 

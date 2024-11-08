@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <script src="{{ asset('assets/js/material-dashboard.min.js') }}?v=3.1.0" defer></script>
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>

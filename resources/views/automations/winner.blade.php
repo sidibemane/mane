@@ -20,8 +20,8 @@
                 @foreach($winners as $winner)
                     <tr>
                         <td>{{ $winner->phone }}</td>
-                        <td>{{ $winner->campaign->name }}</td>
-                        <td>{{ $winner->prize->name }}</td>
+                        <td>{{ $winner->campaign->name ?? 'Non spécifiée' }}</td>
+                        <td>{{ $winner->prize->name ?? 'Non spécifié' }}</td>
                         <td>{{ $winner->created_at->format('d/m/Y') }}</td>
                     </tr>
                 @endforeach

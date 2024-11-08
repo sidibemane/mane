@@ -23,7 +23,6 @@ class AutomationController extends Controller
         return view('automations.index', compact('automations'));
     }
 
-
     public function create()
     {
         $campaigns = Campaign::all();
@@ -31,7 +30,6 @@ class AutomationController extends Controller
 
         return view('automations.create', compact('campaigns', 'prizes'));
     }
-
     // Stocke la nouvelle automatisation
     public function store(Request $request)
     {
@@ -47,54 +45,73 @@ class AutomationController extends Controller
 
         return redirect()->route('automations.index')->with('success', 'Automatisation créée avec succès !');
     }
-    public function showAutomationWinners($automationId)
+
+    public function showWinners($automationId)
     {
-        // Trouver l'automatisation par son ID
-        $automation = Automation::findOrFail($automationId);
+        // Récupérer les gagnants de lots non physiques pour l'automatisation donnée
 
-        // Récupérer les gagnants associés à cette automatisation
-        $winners = Winner::where('automation_id', $automationId)->get();
-
-        // Retourner la vue avec l'automatisation et ses gagnants
-        return view('automations.winners', compact('automation', 'winners'));
-    }
-
-
-    public function showNonPhysicalWinners($automationId)
-    {
-        // Récupérer les gagnants des lots non physiques pour l'automatisation spécifique
         $winners = Winner::where('automation_id', $automationId)
             ->whereHas('prize', function($query) {
-                $query->where('type', 'non-physique'); // Assurez-vous que 'non-physique' est le bon type
+                $query->where('type', 'Non-physique'); // Filtre les lots non physiques
             })
-            ->with(['campaign', 'prize'])
+            ->with(['campaign', 'prize']) // Charger les relations nécessaires
             ->get();
 
-        // Retourner la vue correcte
-        return view('automations.winner', compact('winners')); // Utilisez 'winner' ici
+        // Retourner la vue `winner` dans le dossier `automations`
+        return view('automations.winner', compact('winners'));
     }
 
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'campaign_id' => 'required|exists:campaigns,id',
+            'prize_id' => 'required|exists:prizes,id',
+            'status' => 'required|in:À venir,En cours,Terminé',
+            'frequency' => 'required|string',
+            'number_of_winners' => 'required|integer|min:1',
+        ]);
+
+        $automation = Automation::findOrFail($id);
+        $automation->update($request->all());
+
+        return redirect()->route('automations.index')->with('success', 'Automatisation mise à jour avec succès !');
+    }
 
     public function edit($id)
     {
         $automation = Automation::findOrFail($id);
-        // Charger les données nécessaires (comme les campagnes ou les lots disponibles)
-        return view('automations.edit', compact('automation'));
+        $campaigns = Campaign::all(); // Récupérer toutes les campagnes pour le champ select
+        $nonPhysicalPrizes = Prize::where('type', 'non-physique')->where('campaign_id', $automation->campaign_id)->get();
+
+        return view('automations.edit', compact('automation', 'campaigns', 'nonPhysicalPrizes'));
     }
+    public function nonPhysicalWinner($id)
+    {
+        // Récupérer l'automatisation spécifique
+        //$automation = Automation::findOrFail($id);
+
+        // Récupérer uniquement les gagnants liés à cette automatisation et ayant des prix de type "non-physique"
+        //$winners = Winner::where('automation_id', $id)->whereHas('prize', function ($query) {
+         //   $query->where('type', 'non-physique'); // Filtre pour les prix de type "non-physique"
+        //})->get();
+
+        $winners = Winner::where('automation_id', $id)
+            ->get();
+
+
+        // Retourner la vue avec les gagnants spécifiques à cette automatisation
+       // return view('automations.winner', compact('winners', 'automation'));
+        return view('automations.winner', compact('winners', 'winners'));
+    }
+
 
     public function stop($id)
     {
         $automation = Automation::find($id);
 
         if ($automation) {
-            if ($automation->is_stopped) {
-                // Reprendre l'automatisation sans toucher au champ `status`
-                $automation->is_stopped = false;
-            } else {
-                // Arrêter l'automatisation sans toucher au champ `status`
-                $automation->is_stopped = true;
-            }
-
+            $automation->is_stopped = !$automation->is_stopped;
             $automation->save();
 
             return redirect()->route('automations.index')->with('success', 'Automatisation mise à jour avec succès.');
@@ -103,17 +120,11 @@ class AutomationController extends Controller
         }
     }
 
-
     public function getPrizesForCampaign($campaignId)
     {
         $prizes = Prize::where('campaign_id', $campaignId)->where('type', 'non-physique')->get();
 
         return response()->json($prizes);
     }
-
-    // Affiche les gagnants de l'automatisation
-    public function winners(Automation $automation)
-    {
-        // Logique pour afficher les gagnants de l'automatisation
-    }
 }
+

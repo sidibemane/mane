@@ -44,10 +44,13 @@
                         <td>{{ ucfirst($automation->frequency) }}</td>
                         <td>{{ $automation->number_of_winners }}</td>
                         <td>
-                            <!-- Bouton Consulter avec une marge droite augmentée -->
-                            <a href="{{ route('automations.nonPhysicalWinner', $automation->id) }}" class="btn btn-success" style="margin-right: 20px;">
+                            <a href="{{ route('automations.nonPhysicalWinner', $automation->id) }}"
+                               class="btn btn-success consulterButton"
+                               data-automation-id="{{ $automation->id }}"
+                               style="margin-right: 20px;">
                                 Consulter
                             </a>
+
 
                             <!-- Bouton Modifier sans marge pour coller au bouton Stop -->
                             <a href="{{ route('automations.edit', $automation->id) }}" class="btn btn-warning" title="Modifier" style="width: 57px; height: 38px;">
@@ -71,5 +74,28 @@
             </table>
         @endif
     </div>
+@endsection
+
+@section('custom-scripts')
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const consulterButtons = document.querySelectorAll('.consulterButton');
+
+            if (consulterButtons && consulterButtons.length > 0) {
+                consulterButtons.forEach(button => {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const automationId = this.getAttribute('data-automation-id');
+                        window.location.href = `/automations/${automationId}/winner`;
+                    });
+                });
+            } else {
+                console.error('Aucun bouton avec la classe "consulterButton" trouvé.');
+            }
+        });
+
+    </script>
+
 @endsection
 

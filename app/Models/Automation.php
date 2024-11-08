@@ -16,6 +16,7 @@ class Automation extends Model
         'frequency',
         'number_of_winners',
         'status',
+        'automation_id'
     ];
 
     public function campaign()
